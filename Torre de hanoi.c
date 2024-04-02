@@ -5,16 +5,17 @@
 
 void movetorre(int Numero, char origem, char destino, char auxiliar, int movimentos) {
     
-    movimentos++;
     // Mover os discos
 
 
     if (Numero == 1) {
+        movimentos++;
         printf("Mova o disco do pilar %c para o pilar %c na jogada %i\n", origem, destino, movimentos);
     } else {
+        movimentos++;
         movetorre(Numero - 1, origem, auxiliar, destino, movimentos);
         printf("Mova o disco do pilar %c para o pilar %c na jogada %i\n", origem, destino, movimentos);
-        movetorre(Numero - 1, auxiliar, destino, origem, movimentos);
+        
     }
 }
  
