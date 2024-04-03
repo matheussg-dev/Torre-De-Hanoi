@@ -3,27 +3,20 @@
 // Função para resolver a Torre de Hanoi as 3 pilastras
 // Objetivo mover todos os Discos para pilastra oposta
 
-void movetorre(int Numero, char origem, char auxiliar, char destino, double movimentos) {
+void movetorre(int Numero, char origem, char auxiliar, char destino) {
     
-    double jogada;
     // Mover os discos
-    jogada = movimentos;
 
     if (Numero == 1) {
-        movimentos++;
-        printf("Mova o disco do pilar [%c] para o pilar [%c] na jogada %f\n", origem, destino, jogada);
+        printf("Mova o disco do pilar [%c] para o pilar [%c] na jogada %f\n", origem, destino,);
     } else {
         
-        movimentos++;
         movetorre(Numero - 1, origem, auxiliar, destino, movimentos);
-        printf("Mova o disco do pilar [%c] para o pilar [%c] na jogada %f\n", origem, destino, jogada);
+        printf("Mova o disco do pilar [%c] para o pilar [%c] na jogada %f\n", origem, destino);
         
-        movimentos++;
         movetorre(Numero - 1, auxiliar, destino, origem, movimentos);
-        printf("Mova o disco do pilar [%c] para o pilar [%c] na jogada %f\n", origem, destino, jogada);
+        printf("Mova o disco do pilar [%c] para o pilar [%c] na jogada %f\n", origem, destino);
         
-        movetorre(Numero - 1, destino, origem, auxiliar, movimentos);
-        printf("Mova o disco do pilar [%c] para o pilar [%c] na jogada %f\n", origem, destino, jogada);
     }
 }
  
@@ -32,9 +25,8 @@ int main() {
     // Número de discos
 
     int numerosDeDiscos = 3;
-    int base = 0;
 
-    movetorre(numerosDeDiscos, 'A', 'B', 'C', base);
+    movetorre(numerosDeDiscos, 'A', 'B', 'C',);
     
     return 0;
 }
