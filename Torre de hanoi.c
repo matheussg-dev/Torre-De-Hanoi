@@ -12,18 +12,13 @@ void moveTorre(int Numero, char origem, char destino, char auxiliar, int *jogada
         (*jogadas)++;
     } else {
         
-        moveTorre(Numero - 1, auxiliar, destino, origem, jogadas);
-        printf("Mova o disco do pilar [%c] para o pilar [%c]\tJogada[%i]\n", origem, destino, *jogadas);
-        (*jogadas)++;
-        
         moveTorre(Numero - 1, origem, auxiliar, destino, jogadas);
         printf("Mova o disco do pilar [%c] para o pilar [%c]\tJogada[%i]\n", origem, destino, *jogadas);
         (*jogadas)++;
 
-        moveTorre(Numero - 1, destino, origem, auxiliar, jogadas);
+        moveTorre(Numero - 1, auxiliar, destino, origem, jogadas);
         printf("Mova o disco do pilar [%c] para o pilar [%c]\tJogada[%i]\n", origem, destino, *jogadas);
         (*jogadas)++;
-        
     }
 }
 
